@@ -1,0 +1,27 @@
+### 1. Успешная авторизация админа
+GET http://localhost:8080/authorize?user=admin&password=12345
+Accept: application/json
+
+### 2. Успешная авторизация обычного пользователя
+GET http://localhost:8080/authorize?user=user&password=54321
+Accept: application/json
+
+### 3. Неверный пароль
+GET http://localhost:8080/authorize?user=admin&password=wrong
+Accept: application/json
+
+### 4. Несуществующий пользователь
+GET http://localhost:8080/authorize?user=unknown&password=12345
+Accept: application/json
+
+### 5. Пустой логин
+GET http://localhost:8080/authorize?user=&password=12345
+Accept: application/json
+
+### 6. Пустой пароль
+GET http://localhost:8080/authorize?user=admin&password=
+Accept: application/json
+
+### 7. Оба параметра пустые
+GET http://localhost:8080/authorize?user=&password=
+Accept: application/json
