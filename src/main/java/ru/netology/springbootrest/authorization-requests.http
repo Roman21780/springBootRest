@@ -25,3 +25,7 @@ Accept: application/json
 ### 7. Оба параметра пустые
 GET http://localhost:8080/authorize?user=&password=
 Accept: application/json
+
+### 8. signin
+GET http://localhost/signin
+Accept: application/json
